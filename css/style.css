@@ -4,6 +4,10 @@
    background-color: #fff;
 }
 
+.pad{
+	padding-left:160px;
+}
+
 .btn_1, .btn_2, .btn_2:hover{
   background-color: #6497b1
 }
@@ -2731,7 +2735,7 @@ ul {
 /* line 202, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_about_us.scss */
 .single_about_padding {
   padding: 140px 0 0;
-  margin-bottom: 515px;
+  margin-bottom: 90px;
 }
 
 @media (max-width: 991px) {
