@@ -4,6 +4,10 @@
    background-color: #fff;
 }
 
+.pad{
+	padding-left:160px;
+}
+
 .btn_1, .btn_2, .btn_2:hover{
   background-color: #6497b1
 }
