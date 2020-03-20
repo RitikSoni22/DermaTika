@@ -48,34 +48,34 @@ input:hover, input:focus {
 
 /* line 18, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_common.scss */
 .section_padding {
-  padding: 100px 0px;
+  padding: 50px 0px;
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   /* line 18, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_common.scss */
   .section_padding {
-    padding: 80px 0px;
+    padding: 40px 0px;
   }
 }
 
 @media only screen and (min-width: 768px) and (max-width: 991px) {
   /* line 18, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_common.scss */
   .section_padding {
-    padding: 70px 70px;
+    padding: 35px 70px;
   }
 }
 
 @media (max-width: 576px) {
   /* line 18, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_common.scss */
   .section_padding {
-    padding: 70px 0px;
+    padding: 35px 0px;
   }
 }
 
 @media only screen and (min-width: 576px) and (max-width: 767px) {
   /* line 18, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_common.scss */
   .section_padding {
-    padding: 70px 0px;
+    padding: 35px 0px;
   }
 }
 
@@ -1865,8 +1865,8 @@ ul {
 /* line 24, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_our_depertment.scss */
 .our_depertment .depertment_content {
   background-color: #fff;
-  padding: 100px 0;
-  margin-top: -400px;
+  padding: 50px 0;
+  margin-top: 0px;
 }
 
 @media (max-width: 991px) {
