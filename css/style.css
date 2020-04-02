@@ -3255,11 +3255,12 @@ ul {
 /**************** regervation_part css start ****************/
 /* line 2, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_regervation_part.scss */
 .regervation_part {
-  background-image: url("../img/reservation_bg.png");
+  background-image: -webkit-linear-gradient(to right, #649bff, #0070fa, #649bff);
+  background-image: -o-linear-gradient(to right, #649bff, #0070fa, #649bff);
+  background-image: linear-gradient(to right, #649bff, #0070fa, #649bff);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  position: relative;
   z-index: 1;
 }
 
@@ -3307,7 +3308,7 @@ ul {
 @media (max-width: 991px) {
   /* line 32, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_regervation_part.scss */
   .regervation_part .regervation_content h2 {
-    margin-bottom: 30px;
+    margin-bottom: 0px;
   }
 }
 
