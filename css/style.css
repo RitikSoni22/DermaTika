@@ -569,7 +569,7 @@ ul {
   -webkit-transition: all .4s ease-in-out;
   transition: all .4s ease-in-out;
   text-transform: uppercase;
-  border-radius: 2px;
+  border-radius: 10px;
   font-family: "Roboto", sans-serif;
   background-color: #fff;
   border-radius: 5px;
