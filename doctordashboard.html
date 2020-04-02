@@ -117,29 +117,57 @@
 						aria-expanded="false" aria-label="Toggle navigation">
 						<span class="navbar-toggler-icon"></span>
 					</button>
-
 					<div class="collapse navbar-collapse main-menu-item justify-content-center"
 						id="navbarSupportedContent">
 						<ul class="navbar-nav align-items-center">
-							<li class="nav-item ">
+							<li class="nav-item">
 								<a class="nav-link" href="index.html">Home</a>
 							</li>
 							<li class="nav-item">
 								<a class="nav-link" href="about.html">About Us</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link" href="doctordashboard.html">Doctors</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="patientdashboard.html">Patients</a>
-							</li>
-							<li class="nav-item">
 								<a class="nav-link" href="contact.html">Contact Us</a>
 							</li>
-							
 						</ul>
 					</div>
-					<a class="btn_2 d-none d-lg-block" href="makeanappointment.html">Make an appointment</a>
+					
+					<ul class="navbar-nav align-items-center">
+						<li class="nav-item">
+							<a class="btn_2 d-none d-lg-block" href="makeanappointment.html">Make an appointment</a>
+						</li>
+						<div class="collapse navbar-collapse main-menu-item justify-content-center"
+						id="navbarSupportedContent">
+						<font color="#0070fa">.    .</font>
+						</div>
+						<li class="nav-item">
+							<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+						</li>
+					</ul>                     
+
+					<div id="id01" class="modal">
+						<form class="modal-content animate" action=" " method="post">
+							<div class="imgcontainer">
+								<span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+							</div>
+							<div class="container">
+								<label for="uname"><b>Username</b></label>
+								<input type="text" placeholder="Enter Username" name="uname" required>
+			
+								<label for="psw"><b>Password</b></label>
+								<input type="password" placeholder="Enter Password" name="psw" required>
+						
+								<button type="submit" onclick="doctordashboard.html">Login</button>
+								<label>
+									<input type="checkbox" checked="checked" name="remember"> Remember me
+								</label>
+							</div>
+							<div class="container" style="background-color:#f1f1f1">
+								<button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>  
+								<span class="psw"><a href="#">Sign Up</a></span>
+							</div>
+						</form>
+					</div>
 				</nav>
 			</div>
 		</div>
