@@ -28,7 +28,7 @@
 </head>
 
 <style>
-	#box1{
+#box1{
 		width:220px;
 		height:150px;
 		margin:10px;
@@ -41,39 +41,6 @@
 		color: #242429;
 		font-size: 14px;
 		font-family: "Playfair Display", serif;
-	}
-	
-	.sidenav {
-	  height: 100%;
-	  width: 160px;
-	  position: fixed;
-	  z-index: 9999;
-	  top: 0;
-	  left: 0;
-	  background-color:  #000000;
-	  overflow-x: hidden;
-	  padding-top: 20px;
-	}
-
-	.sidenav a {
-	  padding: 6px 8px 6px 16px;
-	  text-decoration: none;
-	  font-size: 17px;
-	  color: #818181;
-	  display: block;
-	}
-	.sidenav a:hover {
-	  color: #ffffff;
-	}
-
-	.sidenav a:active {
-	  color: #ffffff;
-	}
-
-	
-	@media screen and (max-height: 450px) {
-	  .sidenav {padding-top: 15px;}
-	  .sidenav a {font-size: 17px;}
 	}
 
 	.btn{
@@ -96,26 +63,72 @@
 		background-color: #43cea2;
 	}
 	
+	.sidenav {
+	  height: 100%;
+	  width: 0;
+	  position: fixed;
+	  z-index: 9999;
+	  top: 0;
+	  left: 0;
+	  background-color: #000000;
+	  overflow-x: hidden;
+	  transition: 0.5s;
+	  padding-top: 60px;
+	  opacity: 80%;
+	}
+
+	.sidenav a {
+	  padding: 8px 8px 8px 22px;
+	  text-decoration: none;
+	  font-size: 17px;
+	  color: #818181;
+	  display: block;
+	  transition: 0.3s;
+	}
+
+	.sidenav a:hover {
+	  color: #ffffff;
+	}
+
+	.sidenav .closebtn {
+	  position: absolute;
+	  top: 0;
+	  right: 25px;
+	  font-size: 36px;
+	  margin-left: 50px;
+	}
+
+	#main {
+	  transition: margin-left .5s;
+	  padding: 16px;
+	}
+
+	@media screen and (max-height: 450px) {
+	  .sidenav {padding-top: 15px;}
+	  .sidenav a {font-size: 14px;}
+	}
+	
+	
 </style>
 <body>
 	
+<div id="main" style="padding:0">
 	<!--Sidebar Nav Start-->
-
-	<div class="sidenav">
-		<center><img src="C:\Users\DELL\Desktop\medico\img\favicon.png" alt="logo"></center><br>
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<a href="doctordashboard.html">Home</a>
 		<a href="profilepage.html">Profile</a>
-		<a href="appointments.html">Appointments</a>
+		<a href="appointments.html">Appointments</a>	
 	</div>
 
 	<!--Sidebar Nav Start-->
-	
+
     <!--::header part start::-->
     <header class="main_menu home_menu other_menu">
 		<div class="row align-items-center">
 			<div class="col-lg-12">
 				<nav class="navbar navbar-expand-lg navbar-light">
-					<a class="navbar-brand" href="index.html"> <img src=" " alt="logo"> </a>
+				<span style="font-size:30px;cursor:pointer;color:white" onclick="openNav()">&#9776;</span>
 					<button class="navbar-toggler" type="button" data-toggle="collapse"
 						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 						aria-expanded="false" aria-label="Toggle navigation">
@@ -138,14 +151,7 @@
 					
 					<ul class="navbar-nav align-items-center">
 						<li class="nav-item">
-							<a class="btn_2 d-none d-lg-block" href="makeanappointment.html">Make an appointment</a>
-						</li>
-						<div class="collapse navbar-collapse main-menu-item justify-content-center"
-						id="navbarSupportedContent">
-						<font color="#0070fa">.    .</font>
-						</div>
-						<li class="nav-item">
-							<button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+							<a class="btn_2 d-none d-lg-block" href="index.html">Logout</a>
 						</li>
 					</ul>                     
 
@@ -175,48 +181,54 @@
 				</nav>
 			</div>
 		</div>
-</header>
+	</header>
 <!-- Header part end-->
 	
 	
 	
 	<!--breadcrumb start-->
-	<section class="breadcrumb_part breadcrumb_bg pad">
+	<div class="breadcrumb_part breadcrumb_bg">
 		<div class="container">
 			<div class="row">
 				<div class="col-lg-12">
 					<div class="breadcrumb_iner">
 						<div class="breadcrumb_iner_item">
-							<h2>Appointments</h2>
+							<h2>Dashboard</h2>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
-	</section>
+	</div>
 	<!--breadcrumb end-->
 	
-	<!--Dashboard Part start-->
-	<div class="pad">
-        <div class="container pt-3">
-            <div class="row justify-content-center">
-				<div class="col">
-					<center><div id="box1">
-						<p> Upcoming Appointments</p>
-						<a class="btn_2" href="#">Click Here</a>
+	<!--appointments section start-->'
+	<!--section class="appointments">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="sidenav">
+						<a href="#about">past</a>
+						<a href="#services">Services</a>
+						<a href="#clients">Clients</a>
+						<a href="#contact">Contact</a>
 					</div>
-				</div>
-				<div class="col">
-					<center><div id="box1">
-						<p>Previous Appointments</p>
-						<a class="btn_2 " href="#"> Click Here</a>
-					</div>
-				</div>
-            </div>
-        </div>
-    </div>
-	<!--Dashboard part end-->
-	
+				<div>
+			</div>
+		</div>
+	<!--appointments section end-->
+</div>
+<script>
+function openNav() {
+  document.getElementById("mySidenav").style.width = "150px";
+  document.getElementById("main").style.marginLeft = "150px";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft= "0";
+}
+</script>	
 </body>
 </html>	
 	
