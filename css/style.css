@@ -2272,7 +2272,7 @@ ul {
 /**************** banner part css start ****************/
 /* line 2, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_banner.scss */
 .banner_part {
-  height: 600px;
+  height: 650px;
   position: relative;
   overflow: hidden;
   background-image: linear-gradient(to right,#43cea2,#185a9d);
@@ -2283,14 +2283,14 @@ ul {
   .banner_part {
     background-image: linear-gradient(to right,#43cea2,#185a9d);
     background-color: none;
-    height: 600px;
+    height: 650px;
   }
 }
 
 @media only screen and (min-width: 992px) and (max-width: 1200px) {
   /* line 2, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_banner.scss */
   .banner_part {
-    height: 600px;
+    height: 650px;
   }
 }
 
@@ -2305,7 +2305,7 @@ ul {
 .banner_part .banner_text .banner_text_iner {
   display: table-cell;
   vertical-align: middle;
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 @media (max-width: 991px) {
@@ -6022,6 +6022,35 @@ h1, h2, h3, h4, h5, h6 {
   .footer-area .copyright_part .footer-text {
     text-align: center;
   }
+}
+
+.counter-section{
+  color: #fff;
+}
+
+.icon-box{
+ border: 2px solid #fff;
+ height: 50px;
+ width: 50px;
+ margin: 20px auto;
+ transform: rotate(45deg);
+}
+
+.icon-box .fa{
+  font-size: 25px;
+  margin: 10px auto;
+  color: #ffc800;
+  transform: rotate(-45deg);
+}
+
+.counter-box p{
+  color:#fff;
+  font-size: 15px;
+}
+
+.counter-box .counter{
+  font-size: 50px;
+  margin: -23px auto -27px auto;
 }
 
 /*# sourceMappingURL=style.css.map */
