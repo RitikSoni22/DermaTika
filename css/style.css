@@ -6041,7 +6041,7 @@ h1, h2, h3, h4, h5, h6 {
 
 .icon-box .fa{
   text-align: left;
-  font-size: 60px;
+  font-size: 55px;
   margin: 10px auto;
   color: #ffffff;
   transform: rotate(-45deg);
@@ -6049,15 +6049,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .counter-box p{
   text-align: left;
-  margin-top: 5px;
+  margin-top: 15px;
   color:#fff;
   font-size: 15px;
 }
 
 .counter-box .counter{
   text-align: left;
-  padding-top: 20px;
-  font-size: 50px;
+  padding-top: 30px;
+  font-size: 40px;
   margin: -23px auto -27px auto;
 }
 
