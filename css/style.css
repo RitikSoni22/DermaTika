@@ -6062,15 +6062,18 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .vl {
-  border-bottom: 1px solid rgb(255, 255, 255);
-  border-bottom-left-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-right: 1px solid rgb(255, 255, 255);
   height: 105px;
-  top: 0px;
-}
+  }
 
 .align-left{
   text-align: left;
+}
+
+.banner_text .testimonials{
+  padding-top: 15px;
+  margin-right: 25px;
+  margin-left: 25px;
 }
 
 /*# sourceMappingURL=style.css.map */
