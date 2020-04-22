@@ -2295,6 +2295,7 @@ ul {
   display: table-cell;
   vertical-align: middle;
   padding-top: 100px;
+  text-align: justify;
 }
 
 @media (max-width: 991px) {
@@ -5840,7 +5841,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .flip-box-back {
-  background-color: #C6FFDD;
+  background: rgba(198, 255, 221, 0.3);
   color: black;
   font-size:14px;
   transform: rotateY(180deg);
@@ -5854,6 +5855,7 @@ h1, h2, h3, h4, h5, h6 {
   font-size: 14px;
   margin-bottom: 0px;
   color: #000000;
+  text-align: justify;
 }
 
 .flip-box-back h3{
