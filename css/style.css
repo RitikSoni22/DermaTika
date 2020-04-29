@@ -3406,12 +3406,13 @@ ul {
 /* line 2, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_doctor_list.scss */
 .doctor_part {
   overflow: hidden;
+  padding: 20px;
 }
 
 @media (max-width: 991px) {
   /* line 2, ../../01 cl html template/03_jun 2019/182_medico_html/sass/_doctor_list.scss */
   .doctor_part {
-    padding: 70px 0 55px;
+    padding: 80px 0 55px;
   }
 }
 
