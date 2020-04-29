@@ -70,18 +70,18 @@
 	  z-index: 9999;
 	  top: 0;
 	  left: 0;
-	  background-color: #000000;
+	  background-color: #DDEFBB;
 	  overflow-x: hidden;
 	  transition: 0.5s;
 	  padding-top: 60px;
-	  opacity: 80%;
+	  opacity: 90%;
 	}
 
 	.sidenav a {
 	  padding: 8px 8px 8px 22px;
 	  text-decoration: none;
 	  font-size: 17px;
-	  color: #818181;
+	  color: #000000;
 	  display: block;
 	  transition: 0.3s;
 	}
@@ -210,135 +210,9 @@
 			font-weight: 600;
 			color: #0062cc;
 		}
-		
-		input[type=text], input[type=password] {
-		  width: 100%;
-		  padding: 12px 20px;
-		  margin: 8px 0;
-		  display: inline-block;
-		  border: 1px solid #ccc;
-		  box-sizing: border-box;
+		.active{
+			background-color:#ffffff;
 		}
-
-	/* Set a style for all buttons */
-	button {
-	  background-color: #fff;
-	  color: black;
-	  padding: 14px 20px;
-	  margin: 8px 0;
-	  border: 1px solid #ccc;
-	  border-radius: 5px;
-	  cursor: pointer;
-	  width: 200px;
-	}
-	.btn{
-		background-color: #fefefe;
-	  color: black;
-	  padding: 14px 20px;
-	  margin: 8px 0;
-	  border: 1px solid #ccc;
-	  cursor: pointer;
-	  width: 200px;
-	  }
-
-	button:hover {
-	  opacity: 0.8;
-	}
-
-	/* Extra styles for the cancel button */
-	.cancelbtn {
-	  width: auto;
-	  padding: 10px 18px;
-	  background-color: #f44336;
-	}
-
-	/* Center the image and position the close button */
-	.imgcontainer {
-	  text-align: center;
-	  margin: 24px 0 12px 0;
-	  position: relative;
-	}
-
-	img.avatar {
-	  width: 40%;
-	  border-radius: 50%;
-	}
-
-	.container {
-	  padding: 16px;
-	}
-
-	span.psw {
-	  float: right;
-	  padding-top: 16px;
-	}
-
-	/* The Modal (background) */
-	.modal {
-	  display: none;
-	  position: fixed; /* Stay in place */
-	  z-index: 1; /* Sit on top */
-	  left: 0;
-	  top: 0;
-	  width: 100%; /* Full width */
-	  height: 100%; /* Full height */
-	  overflow: auto; /* Enable scroll if needed */
-	  background-color: rgb(0,0,0); /* Fallback color */
-	  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-	  padding-top: 60px;
-	}
-
-	/* Modal Content/Box */
-	.modal-content {
-	  background-color: #fefefe;
-	  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
-	  border: 1px solid #888;
-	  width: 500px; /* Could be more or less, depending on screen size */
-	}
-
-	/* The Close Button (x) */
-	.close {
-	  position: absolute;
-	  right: 25px;
-	  top: 0;
-	  color: #000;
-	  font-size: 35px;
-	  font-weight: bold;
-	  z-index:9999;
-	}
-
-	.close:hover,.close:focus {
-	  color: red;
-	  cursor: pointer;
-	}
-
-	/* Add Zoom Animation */
-	.animate {
-	  -webkit-animation: animatezoom 0.6s;
-	  animation: animatezoom 0.6s
-	}
-
-	@-webkit-keyframes animatezoom {
-	  from {-webkit-transform: scale(0)} 
-	  to {-webkit-transform: scale(1)}
-	}
-	  
-	@keyframes animatezoom {
-	  from {transform: scale(0)} 
-	  to {transform: scale(1)}
-	}
-
-	/* Change styles for span and cancel button on extra small screens */
-	@media screen and (max-width: 300px) {
-	  span.psw {
-		 display: block;
-		 float: none;
-	  }
-	  .cancelbtn {
-		 width: 100%;
-	  }
-	}
-
 </style>
 <body>
 
@@ -347,7 +221,6 @@
 	<div id="mySidenav" class="sidenav">
 		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
 		<a href="doctordashboard.html">Home</a>
-		<a href="profilepage.html">Profile</a>
 		<a href="appointments.html">Appointments</a>	
 	</div>
 
@@ -358,7 +231,8 @@
 		<div class="row align-items-center">
 			<div class="col-lg-12">
 				<nav class="navbar navbar-expand-lg navbar-light">
-				<span style="font-size:30px;cursor:pointer;color:white" onclick="openNav()">&#9776;</span>
+				<span style="font-size:30px;cursor:pointer;color:white;z-index:999" onclick="openNav()">&#9776;</span>
+				<a class="navbar-brand" href="index.html"> <img src="img/dermatika.png" alt="logo" height="75"> </a>
 					<button class="navbar-toggler" type="button" data-toggle="collapse"
 						data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
 						aria-expanded="false" aria-label="Toggle navigation">
@@ -367,23 +241,26 @@
 					<div class="collapse navbar-collapse main-menu-item justify-content-center"
 						id="navbarSupportedContent">
 						<ul class="navbar-nav align-items-center">
-							<li class="nav-item">
-								<a class="nav-link" href="index.html">Home</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="about.html">About Us</a>
-							</li>
-							<li class="nav-item">
-								<a class="nav-link" href="contact.html">Contact Us</a>
-							</li>
+							
 						</ul>
 					</div>
 					
-					<ul class="navbar-nav align-items-center">
-						<li class="nav-item">
-							<a class="btn_2 d-none d-lg-block" href="index.html">Logout</a>
-						</li>
-					</ul>                     
+					<div class="main-menu-item">
+							<ul class="navbar-nav align-items-center">
+								<li class="nav-item">
+                                    <b><a class="nav-link" href="index.html">Home</a></b>
+                                </li>
+                                <li class="nav-item">
+                                    <b><a class="nav-link" href="about.html">About Us</a></b>
+                                </li>
+                                <li class="nav-item">
+                                    <b><a class="nav-link" href="contact.html">Contact Us</a></b>
+                                </li>
+								<li class="nav-item">
+									<a class="btn_2 d-none d-lg-block" href="index.html">Logout</a>
+								</li>
+							</ul>                     
+						</div>       
 
 					<div id="id01" class="modal">
 						<form class="modal-content animate" action=" " method="post">
@@ -437,7 +314,7 @@
                 <div class="row">
                     <div class="col-md-4">
                         <div class="profile-img">
-                            <img src="C:\Users\DELL\Desktop\DermaTika-master\img\doctor\doctor_1.png" alt=""/>
+                            <img src="img\doctor\doctor_1.png" alt=""/>
                         </div>
                     </div>
                     <div class="col-md-6">
@@ -451,7 +328,7 @@
 							<p class="proile-rating">RANKINGS : <span>8/10</span></p>
                             <ul class="nav nav-tabs" id="myTab" role="tablist">
                                 <li class="nav-item">
-                                    <a class="nav-link active" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home">About</a>
+                                    <a class="nav-link" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home">About</a>
                                 </li>
                             </ul>
                         </div>
@@ -565,50 +442,79 @@
 						</div>
 			</div>
 			<div class="container">
-					<label class="col-lg-3 control-label">First name:</label>
-					<div class="col-lg-8">
-                        <input class="form-control" type="text" value="Jane">
-                    </div>
-					
-                    <label class="col-lg-3 control-label">Last name:</label>
-                    <div class="col-lg-8">
-                        <input class="form-control" type="text" value="Bishop">
-                    </div>
-                
-                    <label class="col-lg-3 control-label">Company:</label>
-                    <div class="col-lg-8">
-                        <input class="form-control" type="text" value="">
-                    </div>
+				<label class="col-lg-3 control-label">First name:</label>
+				<div class="col-lg-8">
+					<input class="form-control" type="text" value="Jane">
+				</div>
+				
+				<label class="col-lg-3 control-label">Last name:</label>
+				<div class="col-lg-8">
+					<input class="form-control" type="text" value="Bishop">
+				</div>
+			
+				<label class="col-lg-3 control-label">Company:</label>
+				<div class="col-lg-8">
+					<input class="form-control" type="text" value="">
+				</div>
 
-                    <label class="col-lg-3 control-label">Email:</label>
-                    <div class="col-lg-8">
-                        <input class="form-control" type="text" value="janesemail@gmail.com">
-                    </div>
+				<label class="col-lg-3 control-label">Email:</label>
+				<div class="col-lg-8">
+					<input class="form-control" type="text" value="janesemail@gmail.com">
+				</div>
 
-                    <label class="col-md-3 control-label">Username:</label>
-                    <div class="col-md-8">
-                        <input class="form-control" type="text" value="janeuser">
-                    </div>
+				<label class="col-md-3 control-label">Username:</label>
+				<div class="col-md-8">
+					<input class="form-control" type="text" value="janeuser">
+				</div>
 
-                    <label class="col-md-3 control-label">Password:</label>
-                    <div class="col-md-8">
-                        <input class="form-control" type="password" value="11111122333">
-                    </div>
+				<label class="col-md-3 control-label">Password:</label>
+				<div class="col-md-8">
+					<input class="form-control" type="password" value="11111122333">
+				</div>
 
-                    <label class="col-md-3 control-label">Confirm password:</label>
-                    <div class="col-md-8">
-                        <input class="form-control" type="password" value="11111122333">
-                    </div>
+				<label class="col-md-3 control-label">Confirm password:</label>
+				<div class="col-md-8">
+					<input class="form-control" type="password" value="11111122333">
+				</div>
 
-                    <label class="col-md-3 control-label"></label>
-                    <div><center>
-                        <input type="button" class="btn btn-primary" value="Save Changes" onclick="document.getElementBy">
-                        <input type="reset" class="btn btn-default" value="Cancel"></center>
-                    </div>
-		</form>
+				<label class="col-md-3 control-label"></label>
+				<div><center>
+					<input type="button" class="btn btn-primary" value="Save Changes" onclick="document.getElementBy">
+					<input type="reset" class="btn btn-default" value="Cancel"></center>
+				</div>
+			</form>
+		</div>
 	</div>
 	<!--update profile-->
-</div>	
+	
+	<!-- footer part start-->
+    <footer class="footer-area">
+        <div class="single-footer-widget">
+            <div class="container">
+			<center>
+				<a href="#" class="footer_logo"> <img src="img/dermatika.png" style="height:250px; width:250px"alt="#"></a><br><br><br>
+				<p>
+					Copyright&copy;
+					<script>    document.write(new Date().getFullYear());   </script>
+					All rights reserved | Thank you for visiting our website
+				</p>
+				<div class="row col-md-4" style="margin-left:4px">
+						<a href="#" target="_blank"> <img src="img/googleplay.png" alt="Play Store" style="height:71px; width:170px; padding-bottom:2px"></a>
+						<a href="#" target="_blank"> <img src="img/appstore.png" alt="App Store" style="height:47px; width:170px; margin-top:10px"></a>
+				</div>
+				<br> <br>
+				<div class=" col-md-3 social_logo">
+					<a href="#"> <img src="img/icon/facebook.png" style="heigth:25px; width:25px"> </a>
+					<a href="#"> <img src="img/icon/instagram.png" style="heigth:25px; width:25px"> </a>
+					<a href="#"> <img src="img/icon/twitter.png" style="heigth:25px; width:25px"> </a>
+					<a href="#"> <img src="img/icon/skype.png" style="heigth:25px; width:25px"> </a>
+				</div>
+			</center>
+			</div>
+        </div>
+    </footer>
+    <!-- footer part end-->
+</div>
 <script>
 function openNav() {
   document.getElementById("mySidenav").style.width = "150px";
