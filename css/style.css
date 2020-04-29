@@ -5891,7 +5891,7 @@ h1, h2, h3, h4, h5, h6 {
   transform: rotate(-45deg);
 }
 .counter-box{
-	margin-left: 150px
+	margin-left: 120px;
 	
 }
 .counter-box p{
@@ -5902,8 +5902,8 @@ h1, h2, h3, h4, h5, h6 {
 
 .counter-box .counter{
   text-align: left;
-  padding-top: 10px;
-  font-size: 25px;
+  padding-top: 15px;
+  font-size: 30px;
 }
 
 .vl {
