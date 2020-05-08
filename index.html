@@ -5,6 +5,7 @@
     <!-- Required meta tags -->
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="google-signin-client_id" content="261750679779-ceih9pph1d71lri7oakhtq9fba6evsh7.apps.googleusercontent.com">
     <title>medical</title>
     <link rel="icon" href="img/favicon.png">
     <!-- Bootstrap CSS -->
@@ -30,12 +31,6 @@
     <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
 
 </head>
-
-<style>
-
-	
-
-</style>
 
 <body>
     <!--::header part start::-->
@@ -91,7 +86,7 @@
                             </div>
                             <div class="container" style="background-color:#f1f1f1">
                                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>  
-                                <span class="psw"><a href="#">Sign Up</a></span>
+                                <div class="g-signin2" data-onsuccess="onSignIn" ></div>
                             </div>
                         </form>
                     </div>
@@ -566,6 +561,14 @@
     <script src="js/contact.js"></script>
     <!-- custom js -->
     <script src="js/custom.js"></script>
+    <!--Googel SignIn js-->
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+        function onSignIn(googleUser) {
+            console.log('User is ' + JSON.stringify(googleUser.getBasicProfile()))
+            document.querySelector('#content').innerText = googleUSer.getBasicProfile().getName();
+        }
+    </script>
 </body>
 
 </html>
