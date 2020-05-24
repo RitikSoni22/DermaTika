@@ -565,9 +565,47 @@
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script>
         function onSignIn(googleUser) {
-            console.log('User is ' + JSON.stringify(googleUser.getBasicProfile()))
-            document.querySelector('#content').innerText = googleUSer.getBasicProfile().getName();
+		console.log('User is ' + JSON.stringify(googleUser.getBasicProfile()))
+         	document.querySelector('#content').innerText = googleUSer.getBasicProfile().getName();
+		var profile = googleUser.getBasicProfile();
+		var id = profile.getId();
+		var fname = profile.getName();
+		var gname = profile.getGivenName();
+		var image = profile.getImageUrl();
+		var email = profile.getEmail();
+
+		// The ID token you need to pass to your backend:
+		var id_token = googleUser.getAuthResponse().id_token;
         }
+    const targetUrl = 'https://dishank.pythonanywhere.com/validate/';
+
+    document.getElementsByClassName("g-signin2").addEventListener("click",function (){
+
+	fetch(targetUrl, {
+	    method: 'POST',
+	    headers: { 'content-type': 'application/json'},
+	    body: { userid : id_token},
+	    //mode: 'no-cors',
+	})
+	.then(blob => blob.json())
+	.then(data => {
+	    //console.log(data)
+	    var patient = data.is_patient;
+	    //var doctor = data.is_doctor;
+	})
+	.catch(e => {
+	    console.log(e);
+	    return e;
+	});
+
+	if (patient == true)
+	{
+	    window.open(patientdashboard.html);
+	}
+	else{
+	    window.open(doctordashboard.html);
+	}
+    })
     </script>
 </body>
 
