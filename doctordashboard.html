@@ -564,47 +564,32 @@
 			document.getElementById("main").style.marginLeft = "0";
 		}
 
-		function get_data() {
-			//const proxyUrl = 'https://cors-anywhere.herokuapp.com/'
-			const targetUrl = 'https://818f7a37.ngrok.io/Get-Doctor/'
-			// const targetUrl = 'http://127.0.0.1:8000/Get-Doctor/'
-			fetch(/*proxyUrl +*/ targetUrl, {
+		window.onload = function() {
+
+			fetch('https://jkartik.pythonanywhere.com/Get-Doctor/', {
 				method: 'POST',
-				body: '{"userid":"rossuserid"}',
-				//mode: 'no-cors',
-				headers: { 'content-type': 'application/json', },
+				headers: { 'content-type': 'application/json'},
+				body: { 'userid' : 'pranavuserid'},
+				mode: 'no-cors',
 			})
-				.then(blob => blob.json())
-				.then(data => {
-					console.log((data));
-					document.getElementsByClassName('data-name')[0].innerHTML = data.name;
-					document.getElementsByClassName('data-spec')[0].innerHTML = data.speciality;
-					document.getElementsByClassName('data-gender')[0].innerHTML = data.gender;
-					document.getElementsByClassName('data-emailid')[0].innerHTML = data.email;
-					document.getElementsByClassName('data-contact')[0].innerHTML = data.contact;
-					document.getElementsByClassName('data-education')[0].innerHTML = data.education;
-					document.getElementsByClassName('data-exp')[0].innerHTML = data.work_exp;
-					//document.querySelector("div").innerHTML = JSON.stringify(data, null, 2);
-					return data;
-				})
-				.catch(e => {
-					console.log(e);
-					return e;
-				});
+			.then(blob => blob.json())
+			.then(data => {
+				console.log((data));
+				document.getElementsByClassName('data-name')[0].innerHTML = data.name;
+				document.getElementsByClassName('data-spec')[0].innerHTML = data.speciality;
+				document.getElementsByClassName('data-gender')[0].innerHTML = data.gender;
+				document.getElementsByClassName('data-emailid')[0].innerHTML = data.email;
+				document.getElementsByClassName('data-contact')[0].innerHTML = data.contact;
+				document.getElementsByClassName('data-education')[0].innerHTML = data.education;
+				document.getElementsByClassName('data-exp')[0].innerHTML = data.work_exp;
+				//document.querySelector("div").innerHTML = JSON.stringify(data, null, 2);
+				return data;
+			})
+			.catch(e => {s
+				console.log(e);
+				return e;
+			});
 		}
-
-		// function load_data(){
-		// 	let data = get_data()
-		// 	console.log(data)
-			// for [key,value] in data.items()
-			// $('.data-pane').append(
-				
-			// )
-			
-		// }
-
-		window.onload = get_data()
-	</script>
 
 </body>
 
