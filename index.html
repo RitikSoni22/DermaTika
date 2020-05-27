@@ -32,21 +32,128 @@
 
 </head>
 
+<style>/*for side-nav*/
+	body {
+		color: #242429;
+		font-size: 14px;
+		font-family: "Playfair Display", serif;
+	}
+
+	.btn {
+		display: inline-block;
+		padding: 10px 35px;
+		text-align: center;
+		font-size: 12px;
+		color: #000000;
+		-o-transition: all .4s ease-in-out;
+		-webkit-transition: all .4s ease-in-out;
+		transition: all .4s ease-in-out;
+		text-transform: uppercase;
+		border-radius: 2px;
+		font-family: "Roboto", sans-serif;
+		background-color: #fff;
+		border-radius: 5px;
+	}
+
+	.btn:hover {
+		background-color: #43cea2;
+	}
+
+    #box1 {
+		width: 220px;
+		height: 150px;
+		margin: 10px;
+		padding: 10px;
+		border-radius: 25px;
+		border: 2px solid #000000;
+		justify-content: center;
+    }
+    
+    .sidenav {
+		height: 100%;
+		width: 0;
+		position: fixed;
+		z-index: 9999;
+		top: 0;
+		left: 0;
+		background-color: #DDEFBB;
+		overflow-x: hidden;
+		transition: 0.5s;
+		padding-top: 60px;
+		opacity: 90%;
+	}
+
+	.sidenav a {
+		padding: 8px 8px 8px 22px;
+		text-decoration: none;
+		font-size: 17px;
+		color: #000000;
+		display: block;
+		transition: 0.3s;
+	}
+
+	.sidenav a:hover {
+		color: #ffffff;
+	}
+
+	.sidenav .closebtn {
+		position: absolute;
+		top: 0;
+		right: 25px;
+		font-size: 36px;
+		margin-left: 50px;
+	}
+
+	#main {
+		transition: margin-left .5s;
+		padding: 16px;
+	}
+
+	@media screen and (max-height: 450px) {
+		.sidenav {
+			padding-top: 15px;
+		}
+
+		.sidenav a {
+			font-size: 14px;
+		}
+    }
+    
+    .bg {
+		background-image: linear-gradient(to right, #43cea2, #185a9d);
+		background-position: center;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-size: inherit;
+	}
+
+</style>
+
 <body>
+<div id="main" style="padding:0">
+    <!--Sidebar Nav Start-->
+	<div id="mySidenav" class="sidenav">
+		<a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+		<a href="index.html">Home</a>
+		<a href="appointments.html">Appointments</a>
+		<a href="prescription.html">Prescription</a>
+	</div>
+	<!--Sidebar Nav Start-->
+    
     <!--::header part start::-->
     <header class="main_menu home_menu other_menu">
         <div class="row align-items-center">
-            <div class="col-lg-12">
+            <div class="col-md-12">
                 <nav class="navbar navbar-expand-lg navbar-light">
+                    <span style="font-size:30px;cursor:pointer;color:white;z-index:999" onclick="openNav()">&#9776;</span>
                     <a class="navbar-brand" href="index.html"> <img src="img/dermatika.png" alt="logo" height="75"> </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    <!-- <button class="navbar-toggler" type="button" data-toggle="collapse"
                         data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
-                    </button>
+                    </button> -->
                     <div class="collapse navbar-collapse main-menu-item justify-content-center"
                         id="navbarSupportedContent">
-                        
                     </div>
                     <div class="main-menu-item">
                         <ul class="navbar-nav align-items-center">
@@ -68,7 +175,7 @@
                             </li>
                         </ul>                     
                     </div>
-                    <!--<div id="id01" class="modal">
+                    <!-- <div id="id01" class="modal">
                         <form class="modal-content animate" action=" " method="post">
                             <div class="imgcontainer">
                                 <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
@@ -90,12 +197,12 @@
                                 <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>  
                             </div>
                         </form>
-                    </div>-->
+                    </div> -->
                 </nav>
             </div>
         </div>
-</header>
-<!-- Header part end-->
+    </header>
+    <!-- Header part end-->
 
     <!-- banner part start-->
     <section class="banner_part">
@@ -516,7 +623,7 @@
         </div>
     </section>
     <!-- our depertment part end-->
-
+</div>
     <!-- footer part start-->
     <footer class="footer-area">
         <div class="single-footer-widget">
@@ -607,6 +714,17 @@
 	    window.open(doctordashboard.html);
 	}
     })
+    </script>
+    <script>
+        function openNav() {
+			document.getElementById("mySidenav").style.width = "150px";
+			document.getElementById("main").style.marginLeft = "150px";
+		}
+
+		function closeNav() {
+			document.getElementById("mySidenav").style.width = "0";
+			document.getElementById("main").style.marginLeft = "0";
+		}
     </script>
 </body>
 
